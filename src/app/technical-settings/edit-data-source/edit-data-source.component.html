@@ -1,0 +1,142 @@
+<!--inner-container-->
+<div class="row mt-3 create_new_company">
+    <div class="container">
+        <!--title-->
+        <div class=" row-div">
+            <div class="title_col">
+                <a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+            </div>
+            <ul class="subm">
+                <li>Technical Setting <a href="">/</a> </li>
+                <li>Datasource <a href="">/</a> </li>
+                <li><a href="">Edit </a></li>
+            </ul>
+            <!-- <h1 class="heading">Create a New Company</h1> -->
+        </div>
+        <!--/title-->
+        <!--data-section-->
+        <div class="data_section row-div">
+            <div class="data_title row-div">
+                <h3> Edit Datasource</h3>
+            </div>
+            <div class="data_inner row-div">
+                <div class="row">
+                    <!--left-sidebar-->
+                    <div class="col-12 col-lg-3 left_sidebar">
+                        <app-technical-sidebar></app-technical-sidebar>
+                    </div>
+                    <!--right_container-->
+                    <div class="col-12 col-lg-9 right_container">
+                        <form [formGroup]="createCompanyForm" class="inner_content row-div">
+                            <div class="global_form  ">
+
+
+                                <div class="form-group name_field">
+                                    <label class="label_field">Find Datasource </label>
+                                    <div class="controls_field">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group name_field">
+                                    <label class="label_field">Name Datasource </label>
+                                    <div class="controls_field">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group name_field">
+                                    <label class="label_field">Descibe Datasource </label>
+                                    <div class="controls_field">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_inner row-div template_exten">
+
+                                <div class="template_table1 table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>S.NO</th>
+                                                <th>Feild Type</th>
+                                                <th>Feild Name</th>
+                                                <th>Search By</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Text</td>
+                                                <td>Client_Name</td>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customControlInline">
+                                                        <label class="custom-control-label"
+                                                            for="customControlInline"></label>
+                                                    </div>
+                                                    <div class="table_input">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Alternative Name">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Data</td>
+                                                <td>Data_Registered</td>
+                                                <td>
+                                                    
+
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customControlInline1">
+                                                            <label class="custom-control-label"
+                                                                for="customControlInline1"></label>
+                                                        </div>
+                                                   
+                                                    <div class="table_input">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Alternative Name">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Text</td>
+                                                <td>Next_of_kig</td>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                            id="customControlInline2">
+                                                            <label class="custom-control-label"
+                                                            for="customControlInline2"></label>
+                                                    </div>
+                                                    <div class="table_input">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Alternative Name">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                            <div class="tfooter_btn_col">
+                                <button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+                                <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--/right_container-->
+                </div>
+            </div>
+        </div>
+        <!--/data-section-->
+    </div>
+</div>
+<!--/inner-container-->

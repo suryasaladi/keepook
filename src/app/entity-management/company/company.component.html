@@ -1,0 +1,185 @@
+<div class="row mt-3 create_new_company">
+	<div class="container">
+		<!--title-->
+		<div class=" row-div">
+			<div class="title_col">
+				<a (click)='goBack()'  class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+			</div>
+
+			<ul class="subm">
+				<li>Entity Management <a href="">/</a> </li>
+				<li>Company <a href="">/</a> </li>
+				<li><a href="">Add </a></li>
+			</ul>
+			<!-- <h1 class="heading">Create a New Company</h1> -->
+		</div>
+		<!--/title-->
+
+		<!--data-section-->
+		<div class="data_section row-div">
+			<div class="data_title row-div">
+				<h3>New Company Setup</h3>
+			</div>
+			<div class="data_inner row-div">
+				<div class="row">
+					<!--left-sidebar-->
+					<div class="col-12 col-lg-3 left_sidebar">
+						<app-entity-sidebar></app-entity-sidebar>
+					</div>
+
+					<!--right_container-->
+					<div class="col-12 col-lg-9 right_container">
+						<form [formGroup]="createCompanyForm" class="inner_content row-div"
+							(ngSubmit)="createCompanySubmit()">
+							<div class="create_company_form global_form">
+								<h3>General</h3>
+								<div class="form-group name_field">
+									<label class="label_field">Company Name</label>
+									<div class="controls_field">
+										<input type="text" class="form-control" required name="companyName"
+											formControlName="companyName" placeholder="Enter the company name">
+										<small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+											<div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Company name is
+												required</div>
+										</small>
+									</div>
+
+								</div>
+								<div class="form-group name_field">
+									<label class="label_field">Website</label>
+									<div class="controls_field">
+										<input type="text" class="form-control" required name="website"
+											formControlName="website" placeholder="Enter the website URL">
+										<small *ngIf="submitted && fConrols.website?.errors" class="text-danger">
+											<div *ngIf="fConrols.website?.errors?.required">&#x26A0; Website URL invalid</div>
+										</small>
+									</div>
+
+								</div>
+						
+
+								<div class="form-group comp_logo_field">
+									<h3>Company Logo</h3>
+									<p>Select an image file on your computer (4MB max)</p>
+									<div class="browse_file">
+											<angular-file-uploader #fileUpload1
+											[config]="afuConfig"
+											[resetUpload]="true"
+											(ApiResponse)="DocUpload($event)">
+									  </angular-file-uploader>
+										<div class="custom-file">
+											
+									  
+											<input type="file" required class="custom-file-input" formControlName="logo"
+												name="logo">
+											<label class="custom-file-label" for="customFile">
+												<img src="assets/images/browse_file.png" alt="">
+											</label> 
+											<small *ngIf="submitted && fConrols.logo?.errors" class="text-danger">
+												<div *ngIf="fConrols.logo?.errors?.required">&#x26A0; Company logo is
+													required</div>
+											</small>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group comp_detail">
+									<h3>Details</h3>
+									<div class="form-group adrs_field">
+										<label for="" class="label_field">Company Address</label>
+										<div class="controls_field">
+											<textarea class="form-control" formControlName="address"
+												placeholder="Enter the company address"></textarea>
+											<small *ngIf="submitted && fConrols.address?.errors"
+												class="text-danger">
+												<div *ngIf="fConrols.address?.errors?.required">&#x26A0; Company
+													Address is required</div>
+											</small>
+										</div>
+									</div>
+									<div class="form-group city_field">
+										<label for="" class="label_field">City</label>
+										<div class="controls_field">
+											<input type="text" formControlName="city" name="city" class="form-control"
+												placeholder="Enter the city name">
+											<small *ngIf="submitted && fConrols.city?.errors" class="text-danger">
+												<div *ngIf="fConrols.city?.errors?.required">&#x26A0; City name is
+													required
+												</div>
+											</small>
+										</div>
+									</div>
+
+									<div class="form-group state_field">
+										<label class="label_field">Country</label>	
+										<div class="controls_field">
+												<select class="form-control" formConrolName="country" name="country">
+														<option [value]="'UAE'">United Arab Emirates</option>
+														<option [value]="'IN'">IN</option>  
+												</select>
+												<small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
+													<div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the country
+													</div>
+												</small>
+										</div>
+									</div>
+									<div class="form-group zipCode_field">
+										<label for="" class="label_field">ZIP Code</label>
+										<div class="controls_field">
+											<input type="text" formControlName="zipCode" name="zipCode"
+												class="form-control" placeholder="Enter the ZIP code">
+											<small *ngIf="submitted && fConrols.zipCode?.errors" class="text-danger">
+												<div *ngIf="fConrols.zipCode?.errors?.required">&#x26A0;ZIP Code is
+													required
+												</div>
+											</small>
+										</div>
+									</div>
+									<div class="form-group phone_field">
+										<label for="" class="label_field">Phone Number</label>
+										<div class="controls_field">
+											<input type="text" formControlName="phoneNumber" name="phoneNumber"
+												class="form-control" placeholder="Enter the phone number">
+											<small *ngIf="submitted && fConrols.phoneNumber?.errors"
+												class="text-danger">
+												<div *ngIf="fConrols.phoneNumber?.errors?.required">&#x26A0;Phone number
+													is
+													required</div>
+											</small>
+										</div>
+									</div>
+									<div class="form-group contact_field">
+										<label for="" class="label_field">Contact Person</label>
+										<div class="controls_field">
+											<input type="text" class="form-control" name="contactPerson"
+												formControlName="contactPerson"
+												placeholder="Enter the contact person name">
+											<small *ngIf="submitted && fConrols.contactPerson?.errors"
+												class="text-danger">
+												<div *ngIf="fConrols.contactPerson?.errors?.required">&#x26A0;Contact
+													person
+													name is required</div>
+											</small>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="tfooter_btn_col">
+								<button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+								<button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+							</div>
+
+						</form>
+					</div>
+					<!--/right_container-->
+				</div>
+			</div>
+
+		</div>
+		<!--/data-section-->
+
+
+	</div>
+</div>
+<!--/inner-container-->

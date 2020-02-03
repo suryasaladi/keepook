@@ -1,0 +1,9 @@
+table.table td{
+    border: 1px solid #898989;
+}
+table.table td img{
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+

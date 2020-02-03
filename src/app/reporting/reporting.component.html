@@ -1,0 +1,114 @@
+<!--inner-container-->
+<div class="row mt-3 create_new_company">
+    <div class="container">
+        <!--title-->
+        <div class=" row-div">
+            <div class="title_col">
+                <a href="javascript:void(0);" class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+            </div>
+
+            <ul class="subm">
+                <li>Entity Management <a href="">/</a> </li>
+                <li>Company <a href="">/</a> </li>
+                <li><a href="">Add </a></li>
+
+            </ul>
+            <!-- <h1 class="heading">Create a New Company</h1> -->
+        </div>
+        <!--/title-->
+
+        <!--data-section-->
+        <div class="data_section row-div">
+            <div class="data_title row-div">
+                <h3>New Company Setup</h3>
+            </div>
+            <div class="data_inner row-div">
+                <div class="table-form col-12">
+                    <div class="row">
+                        <div class="col-sm-4 pl-0">
+                                <div class=" module-col">
+                                        <span>Search:</span>
+                                       <input type="text" placeholder="Type to Filter">
+                                    </div>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                                <div class=" module-col">
+                                        <span>Org. Unit</span>
+                                        <select name="">
+                                            <option value="">Emirates NBD Bank</option>
+                                            <option value="">Emirates NBD Bank</option>
+                                        </select>
+                                    </div>
+                        </div>
+                        <div class="col-sm-4 pr-0 ml-auto">
+                            <div class=" module-col  ml-auto">
+                                <span>Show Per Page:</span>
+                                <select name="">
+                                    <option value="">All</option>
+                                    <option value="">10</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="table-resposive">
+                    <table class="w-100 table table-hover">
+                        <thead>
+                            <tr>
+                                <th>REPORT NAME</th>
+                                <th>DATA OF CREATION</th>
+                                <th>CREATED BY</th>
+                                <th>LAST MODIFIED ON</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2019_UserbyOrg</td>
+                                <td>21-10-2018</td>
+                                <td>John Doe</td>
+                                <td>21-10-2018</td>
+                                <td class="text-center">
+                                    <img class="mr-5" style="width: 20px;height: 20px;" src="./assets/images/eye.svg" />
+                                    <img src="./assets/images/edit.svg" />
+                                    <img class="ml-5" src="./assets/images/download.svg" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2019_UserbyOrg</td>
+                                <td>21-10-2018</td>
+                                <td>John Doe</td>
+                                <td>21-10-2018</td>
+                                <td class="text-center">
+                                    <img class="mr-5" style="width: 20px;height: 20px;" src="./assets/images/eye.svg" />
+                                    <img src="./assets/images/edit.svg" />
+                                    <img class="ml-5" src="./assets/images/download.svg" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2019_UserbyOrg</td>
+                                <td>21-10-2018</td>
+                                <td>John Doe</td>
+                                <td>21-10-2018</td>
+                                <td class="text-center">
+                                    <img class="mr-5" style="width: 20px;height: 20px;" src="./assets/images/eye.svg" />
+                                    <img src="./assets/images/edit.svg" />
+                                    <img class="ml-5" src="./assets/images/download.svg" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-pagination float-right">
+                    <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination">
+                    </ngb-pagination>
+                </div>
+            </div>
+        </div>
+        <!--/data-section-->
+
+
+    </div>
+</div>
+<!--/inner-container-->

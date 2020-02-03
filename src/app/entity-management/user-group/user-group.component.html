@@ -1,0 +1,125 @@
+<!--inner-container-->
+<div class="row mt-3 create_new_company">
+    <div class="container">
+        <!--title-->
+        <div class=" row-div">
+            <div class="title_col">
+                <a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+            </div>
+
+            <ul class="subm">
+                <li>Entity Management <a href="">/</a> </li>
+                <li>Company <a href="">/</a> </li>
+                <li><a href="">Add </a></li>
+            </ul>
+            <!-- <h1 class="heading">Create a New Company</h1> -->
+        </div>
+        <!--/title-->
+
+        <!--data-section-->
+        <div class="data_section row-div">
+            <div class="data_title row-div">
+                <h3>New Company Setup</h3>
+            </div>
+            <div class="data_inner row-div">
+                <div class="row">
+                    <!--left-sidebar-->
+                    <div class="col-12 col-lg-3 left_sidebar">
+                        <app-entity-sidebar></app-entity-sidebar>
+                    </div>
+                    <div class="col-12 col-lg-9 right_container">
+                        <div class="inner_content row-div">
+                            <div class="create_user_form global_form">
+                                <div class="form-group user_role_field">
+                                    <label class="label_field">Create User Role</label>
+                                    <div class="controls_field">
+                                        <input type="text" class="form-control" placeholder="Legal User">
+                                    </div>
+                                </div>
+                                <div class="form-group subject_field">
+                                    <label class="label_field">Select Object</label>
+                                    <div class="controls_field">
+                                        <select class="form-control">
+                                            <option>Templates</option>
+                                            <option>Edit Templates</option>
+                                            <option>View Templates</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group object_field">
+                                    <label class="label_field">Select Object</label>
+                                    <div class="controls_field edit_unit">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                class="custom-control-input" checked>
+                                            <label class="custom-control-label" for="customRadio1">Create
+                                                Templates</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio2">View
+                                                Templates</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio3" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio3">Edit
+                                                Templates</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio4" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio4">Assign Templates to
+                                                Other Users</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio5" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio5">Review
+                                                Templates</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio6" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio6">Lock Template While
+                                                Editing a
+                                                Version</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group esclation_field form-group2">
+                                    <label class="label_field">Escalation Users to This Role </label>
+                                    <div class="controls_field">
+                                        <div class="form-group lavel_1">
+                                            <label>Lavel 1</label>
+                                            <select class="form-control">
+                                                <option>Legal Manager</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group lavel_2">
+                                            <label>Lavel 2</label>
+                                            <select class="form-control">
+                                                <option>Head of Legal Department</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tfooter_btn_col">
+                                    <button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+                                    <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--/data-section-->
+
+
+    </div>
+</div>
+<!--/inner-container-->

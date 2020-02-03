@@ -1,0 +1,207 @@
+<div class="row mt-3 create_new_company">
+        <div class="container">
+            <!--title-->
+            <div class=" row-div">
+                <div class="title_col">
+                    <a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+                </div>
+                <ul class="subm">
+                    <li>Technical Setting Management <a href="">/</a> </li>
+                    <li>Contract Properties <a href="">/</a> </li>
+                    <li><a href="">  Add </a></li>
+                </ul>
+                <!-- <h1 class="heading">Create a New Company</h1> -->
+            </div>
+            <!--/title-->
+    
+            <!--data-section-->
+            <div class="data_section row-div">
+                <div class="data_title row-div">
+                    <h3>Define Contract Properties to be Set for Your Organization Unit</h3>
+                </div>
+                <div class="data_inner row-div">
+                    <div class="row">
+                        <!--left-sidebar-->
+                        <div class="col-12 col-lg-3 left_sidebar">
+                            <app-technical-sidebar></app-technical-sidebar>
+                        </div>
+                        <!--right-container-->
+                        <div class="col-12 col-lg-9 right_container">
+                                <form class="inner_content row-div template-setting">
+                                    <div class="define_property_col ">
+                                        <h3>Organizational Unit</h3>
+                                        <div class="emirate_select_field">
+                                            <div class="controls_field">
+                                                <select class="form-control">
+                                                    <option>Emirates NBD Bank</option>
+                                                    <option>Emirates NBD Bank</option>
+                                                    <option>Emirates NBD Bank</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="template_range_col">
+                                            <h3>Maintain Number Ranges for the templates </h3>
+                                            <div class="template_radio">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio1" name="customRadio"
+                                                        class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="customRadio1">Internal</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio2" name="customRadio"
+                                                        class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio2">External</label>
+                                                </div>
+                                            </div>
+        
+                                            <div class="template_table table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>S.NO</th>
+                                                            <th>From Number</th>
+                                                            <th>To Number</th>
+                                                            <th>Current Number Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>254</td>
+                                                            <td>8563</td>
+                                                            <td>
+                                                                <span class="status active">Active</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>254</td>
+                                                            <td>8563</td>
+                                                            <td>
+                                                                <span class="status">Inactive</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>254</td>
+                                                            <td>8563</td>
+                                                            <td>
+                                                                <span class="status active">Active</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="template_exten">
+                                            <h3>Extensibility of Templates</h3>
+                                            <div class="check_option">
+                                                <p>Are Created Templates Available to Other Organizations? Yes/No</p>
+                                                <!-- <div class="switch_toggle">
+                                                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes"
+                                                        data-off="No" data-size="sm">
+        
+                                                </div> -->
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class="check_option">
+                                                <p>If Yes, Extensible to All</p>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="customControlInline">
+                                                    <label class="custom-control-label" for="customControlInline"></label>
+                                                </div>
+                                            </div>
+                                            <div class="extensible_col">
+                                                <p>Or Extensible to Selected Organizations</p>
+                                                <div class="select_org">
+                                                    <span class="extensible_select">Org 1</span>
+                                                    <span class="extensible_select active">Org 2 <span class="check"><i
+                                                                class="la la-check"></i>
+                                                        </span></span>
+                                                    <span class="extensible_select active">Org 3 <span class="check"><i
+                                                                class="la la-check"></i>
+                                                        </span></span>
+                                                    <span class="extensible_select">Org 4</span>
+                                                    <span class="extensible_select active">Org 5 <span class="check"><i
+                                                                class="la la-check"></i>
+                                                        </span></span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="global_form template_exten">
+                                            <h3>AT COMPANY LEVEL</h3>
+                                            <div class="form-group name_field">
+                                                <label class="label_field">Select Company </label>
+                                                <div class="controls_field">
+                                                    <select class="form-control">
+                                                        <option>Emirates NBD Group Company</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group location_field form-group2 ">
+                                                <label class="label_field">Store Template For a Period of</label>
+                                                <div class="controls_field form-group3">
+                                                    <div class="form-group lavel_1">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="form-group lavel_2">
+                                                        <select class="form-control">
+                                                            <option>Years</option>
+                                                            <option>Months</option>
+                                                            <option>Weeks</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="global_form template_exten">
+                                                <h3>AT ORGANIZATION UNIT LEVEL</h3>
+                                                <div class="form-group name_field">
+                                                    <label class="label_field">Select Company </label>
+                                                    <div class="controls_field">
+                                                        <select class="form-control">
+                                                            <option>Emirates NBD Group Company</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group location_field form-group2 ">
+                                                    <label class="label_field">Store Template For a Period of</label>
+                                                    <div class="controls_field form-group3">
+                                                        <div class="form-group lavel_1">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                        <div class="form-group lavel_2">
+                                                            <select class="form-control ">
+                                                                <option>Years</option>
+                                                                <option>Months</option>
+                                                                <option>Weeks</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="storing_template">
+                                                    <h3>Path for storing templates</h3>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                    </div>
+                                    <div class="tfooter_btn_col">
+                                        <button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+                                        <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+                                    </div>
+        
+                                </form>
+                            </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

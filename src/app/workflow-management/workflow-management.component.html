@@ -1,0 +1,63 @@
+<!--template-feature-4-circle-->
+<div class="pt-3 pb-3 row-div">
+    <div class="container">
+        <h3 class="text-center">Create A Keepook Workflow</h3>
+        <form class="row pt-3">
+            <div class="col-12 col-md-6 pl-0 pr-0 text-center">
+                <div class="work-box-bg">
+                    <a title="Play Video" data-toggle="modal" data-target="#myModal">
+                        <div></div>
+                        <img src="assets/images/play-icon.png">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 pl-0 pr-0 text-center">
+                <div class="work-box-form">
+                    <div class="text-left form-container p-3">
+                        <div class="form-group">
+                            <label for="">Workflow Name </label>
+                            <input type="text" class="form-control" id="processName" placeholder="Name your workflow">
+                        </div>
+                        <label >Workflow Type </label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">Template Process</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">Smart Template Process</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio3">Contract Process</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tfooter_btn_col p-2">
+                <button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+                <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal" id="myModal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <iframe width="465" height="320" src="https://www.youtube.com/embed/jnp_ny4SOQE" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END-template-feature-4-circle-->
+
+<app-workflow-step></app-workflow-step>

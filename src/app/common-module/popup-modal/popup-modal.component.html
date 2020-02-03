@@ -1,0 +1,15 @@
+<button style="display: none" class="btn btn-outline-primary mb-2 mr-2" id="modalButton" (click)="openVerticallyCentered(content)">Modal vertically centered</button>
+
+
+<ng-template #content  let-modal>
+   <div class="modal-body span-popup">  
+     <span class="img-span ">
+        <img  src="/assets/images/tick.svg">
+     </span>
+     <h2 class="pt-2">{{message}}</h2> 
+     <p class=" pt-2 pb-4">The contract has been {{messageSmall}}. <br>
+        You can continue editing this contract at any time.</p>
+        <a  (click)="doRedirect()" class="red-btn mt-4 mb-4">Done</a>
+        <!-- <a  (click)="modal.close()" class="blue-text-btn">Continue Editing Contract</a> -->
+  </div>
+</ng-template>

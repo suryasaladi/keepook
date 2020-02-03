@@ -1,0 +1,199 @@
+<!--inner-container-->
+<div class="row mt-3 create_new_company">
+        <div class="container">
+            <!--title-->
+            <div class=" row-div">
+                <div class="title_col">
+                    <a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+                </div>
+                <ul class="subm">
+                    <li>Technical Setting <a href="">/</a> </li>
+                    <li>Datasource <a href="">/</a> </li>
+                    <li><a href="">View </a></li>
+                </ul>
+                <!-- <h1 class="heading">Create a New Company</h1> -->
+            </div>
+            <!--/title-->
+            <!--data-section-->
+            <div class="data_section row-div">
+                <div class="data_title row-div">
+                    <h3> Data Retantion Settings</h3>
+                </div>
+                <div class="data_inner row-div">
+                    <div class="row">
+                        <!--left-sidebar-->
+                        <div class="col-12 col-lg-3 left_sidebar">
+                            <app-technical-sidebar></app-technical-sidebar>
+                        </div>
+                        <!--right_container-->
+                        <div class="col-12 col-lg-9 right_container">
+                            <form [formGroup]="createCompanyForm" class="inner_content row-div">
+                                <div class="col-12 col-md-8 create_company_form global_form">
+                                    <div class="row ">
+                                        <h3>AT COMPANY LEVEL</h3>
+                                        <div class="form-group name_field">
+                                            <label class="label_field">Select Company</label>
+                                            <div class="controls_field">
+                                                <input type="text" class="form-control" required name="companyNameCL"
+                                                    formControlName="companyNameCL"
+                                                    placeholder="Emirates NBD Group Company">
+                                                <small *ngIf="submitted && fConrols.companyNameCL?.errors"
+                                                    class="text-danger">
+                                                    <div *ngIf="fConrols.companyNameCL?.errors?.required">&#x26A0; Company
+                                                        name is
+                                                        required</div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group location_field form-group2 ">
+                                            <label class="label_field">Store Templates For a Period of</label>
+                                            <div class="controls_field">
+                                                <div class="form-group lavel_1">
+                                                    <input type="text" class="form-control" required name="TemplatesCountCL"
+                                                        formControlName="TemplatesCountCL" placeholder="10">
+                                                    <small *ngIf="submitted && fConrols.TemplatesCountCL?.errors"
+                                                        class="text-danger">
+                                                        <div *ngIf="fConrols.TemplatesCountCL?.errors?.required">&#x26A0;
+                                                            Templates Count
+                                                            is
+                                                            required</div>
+                                                    </small>
+                                                </div>
+                                                <div class="form-group lavel_2 " >
+                                                    <select class="form-control" required
+                                                        formControlName="TemplatesPeriodCL" name="TemplatesPeriodCL">
+                                                        <option value="0">Years</option>
+                                                    </select>
+                                                    <small *ngIf="submitted && fConrols.TemplatesPeriodCL?.errors"
+                                                        class="text-danger">
+                                                        <div *ngIf="fConrols.TemplatesPeriodCL?.errors?.required">&#x26A0;
+                                                            Templates Period Count
+                                                            is
+                                                            required</div>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group location_field form-group2">
+                                            <label class="label_field">Store Contracts For a Period of</label>
+                                            <div class="controls_field">
+                                                <div class="form-group lavel_1">
+                                                    <input type="text" class="form-control" required name="ContractsCountCL"
+                                                        formControlName="ContractsCountCL" placeholder="10">
+                                                    <small *ngIf="submitted && fConrols.ContractsCountCL?.errors"
+                                                        class="text-danger">
+                                                        <div *ngIf="fConrols.ContractsCountCL?.errors?.required">&#x26A0;
+                                                            Contracts Count
+                                                            is
+                                                            required</div>
+                                                    </small>
+                                                </div>
+                                                <div class="form-group lavel_2">
+                                                    <select class="form-control" required
+                                                        formControlName="ContractsPeriodCL" name="ContractsPeriodCL">
+                                                        <option value="0">Years</option>
+                                                    </select>
+                                                    <small *ngIf="submitted && fConrols.ContractsPeriodCL?.errors"
+                                                        class="text-danger">
+                                                        <div *ngIf="fConrols.ContractsPeriodCL?.errors?.required">&#x26A0;
+                                                            Contracts Period Count
+                                                            is
+                                                            required</div>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8 create_company_form global_form template_exten">
+                                    <div class="row ">
+                                        <h3>AT ORGANIZATION UNIT LEVEL</h3>
+                                        <div class="form-group name_field">
+                                            <label class="label_field">Select Company</label>
+                                            <div class="controls_field">
+                                                <input type="text" class="form-control" required name="companyNameOL"
+                                                    formControlName="companyNameOL"
+                                                    placeholder="Emirates NBD Group Company">
+                                                <small *ngIf="submitted && fConrols.companyNameOL?.errors"
+                                                    class="text-danger">
+                                                    <div *ngIf="fConrols.companyNameOL?.errors?.required">&#x26A0; Company
+                                                        name
+                                                        is
+                                                        required</div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group location_field form-group2">
+                                            <label class="label_field">Store Templates For a Period of</label>
+                                            <div class="controls_field">
+                                                <div class="form-group lavel_1">
+                                                    <input type="text" class="form-control" required name="TemplatesCountOL"
+                                                        formControlName="TemplatesCountOL" placeholder="10">
+                                                    <small *ngIf="submitted && fConrols.TemplatesCountOL?.errors"
+                                                        class="text-danger">
+                                                        <div *ngIf="fConrols.TemplatesCountOL?.errors?.required">&#x26A0;
+                                                            Templates Count
+                                                            is
+                                                            required</div>
+                                                    </small>
+                                                </div>
+                                                <div class="form-group lavel_2">
+                                                    <select class="form-control" required
+                                                        formControlName="TemplatesPeriodOL" name="TemplatesPeriodOL">
+                                                        <option value="0">Years</option>
+                                                    </select>
+                                                    <small *ngIf="submitted && fConrols.TemplatesPeriodOL?.errors"
+                                                        class="text-danger">
+                                                        <div *ngIf="fConrols.TemplatesPeriodOL?.errors?.required">&#x26A0;
+                                                            Templates Period Count
+                                                            is
+                                                            required</div>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group location_field form-group2">
+                                            <label class="label_field">Store Contracts For a Period of</label>
+                                            <div class="controls_field">
+                                                <div class="form-group lavel_1">
+                                                    <input type="text" class="form-control" required name="ContractsCountOL"
+                                                        formControlName="ContractsCountOL" placeholder="10">
+                                                    <small *ngIf="submitted && fConrols.ContractsCountOL?.errors"
+                                                        class="text-danger">
+                                                        <div *ngIf="fConrols.ContractsCountOL?.errors?.required">&#x26A0;
+                                                            Contracts Count
+                                                            is
+                                                            required</div>
+                                                    </small>
+                                                </div>
+                                                <div class="form-group lavel_2">
+                                                    <select class="form-control" required
+                                                        formControlName="ContractsPeriodOL" name="ContractsPeriodOL">
+                                                        <option value="0">Years</option>
+                                                    </select>
+                                                    <small *ngIf="submitted && fConrols.ContractsPeriodOL?.errors"
+                                                        class="text-danger">
+                                                        <div *ngIf="fConrols.ContractsPeriodOL?.errors?.required">&#x26A0;
+                                                            Contracts Period Count
+                                                            is
+                                                            required</div>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tfooter_btn_col">
+                                    <button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+                                    <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--/right_container-->
+                    </div>
+                </div>
+            </div>
+            <!--/data-section-->
+        </div>
+    </div>
+    <!--/inner-container-->

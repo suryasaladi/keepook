@@ -1,0 +1,342 @@
+<!-- Modal -->
+<div class="modal fade workflow-step " id="myModal" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <ul class="nav w-100 nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">
+                            <span>
+                                <img src="assets/images/stairs.png">
+                                <img class="active-image" src="assets/images/stairs-white.png">
+                            </span>
+                            STEP</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#menu1">
+                            <span>
+                                <img src="assets/images/deadline.png">
+                                <img class="active-image" src="assets/images/deadline-white.png">
+                            </span>DEADLINE</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#menu2">
+                            <span>
+                                <img src="assets/images/assignto.png">
+                                <img class="active-image" src="assets/images/assignto-white.png">
+                            </span>ASSIGN TO </a>
+                    </li>
+                    <li><a data-toggle="tab" href="#menu4">
+                            <span>
+                                <img src="assets/images/description.png">
+                                <img class="active-image" src="assets/images/description-white.png">
+                            </span>DESCRIPTION</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#menu5">
+                            <span>
+                                <img src="assets/images/rules.png">
+                                <img class="active-image" src="assets/images/rules-white.png">
+                            </span>RULES</a>
+                    </li>
+                    <li><a data-toggle="tab" href="#menu6">
+                            <span>
+                                <img src="assets/images/contract.png">
+                                <img class="active-image" src="assets/images/contract-white.png">
+                            </span>
+                            CONTRACT TEMPLATE</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-body" style="padding:40px 50px;">
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="tfooter_btn_col p-2">
+                            <div class="create_company_form global_form">
+
+                                <div class="form-group name_field">
+                                    <label class="label_field">Step Description</label>
+                                    <div class="controls_field">
+                                        <input type="text" class="form-control" required name="companyName"
+                                            formControlName="companyName" placeholder="Enter step description">
+                                        <small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+                                            <div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Roles name is
+                                                required</div>
+                                        </small>
+                                    </div>
+
+                                </div>
+                                <div class="form-group name_field">
+                                    <label class="label_field">Step Name</label>
+                                    <div class="controls_field">
+                                        <input type="text" class="form-control" required name="companyName"
+                                            formControlName="companyName" placeholder="Enter step name">
+                                        <small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+                                            <div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Roles name is
+                                                required</div>
+                                        </small>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+                            <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+
+                        <div class="create_company_form global_form">
+                            <div class="form-group name_field">
+                                <label class="label_field">Duration Type</label>
+                                <div class="controls_field">
+                                    <select class="form-control" formConrolName="country" name="country">
+                                        <option [value]="'UAE'">Monthly</option>
+                                        <option [value]="'IN'">Yearly</option>
+                                    </select>
+                                    <small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the
+                                            country
+                                        </div>
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="form-group name_field">
+                                <label class="label_field">Duration</label>
+                                <div class="controls_field">
+                                    <select class="form-control" formConrolName="country" name="country">
+                                        <option [value]="'UAE'">1</option>
+                                        <option [value]="'IN'">2</option>
+                                    </select>
+                                    <small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the
+                                            country
+                                        </div>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group name_field">
+                                <label class="label_field">Before Or After</label>
+                                <div class="controls_field">
+                                    <input type="text" class="form-control" required name="companyName"
+                                        formControlName="companyName">
+                                    <small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Roles name is
+                                            required</div>
+                                    </small>
+                                </div>
+
+                            </div>
+                            <div class="form-group name_field">
+                                <label class="label_field">Step Description</label>
+                                <div class="controls_field">
+                                    <input type="text" class="form-control" required name="companyName"
+                                        formControlName="companyName" placeholder="Enter step description">
+                                    <small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Roles name is
+                                            required</div>
+                                    </small>
+                                </div>
+
+                            </div>
+                            <div class="form-group name_field">
+                                <label class="label_field">Step Stage</label>
+                                <div class="controls_field">
+                                    <input type="text" class="form-control" required name="companyName"
+                                        formControlName="companyName" placeholder="Enter step stage">
+                                    <small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Roles name is
+                                            required</div>
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <div class="create_company_form global_form">
+                            <div class="form-group name_field">
+                                <label class="label_field">Email</label>
+                                <div class="controls_field">
+                                    <input type="text" class="form-control" required name="companyName"
+                                        formControlName="companyName" placeholder="Enter step stage">
+                                    <small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Roles name is
+                                            required</div>
+                                    </small>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group name_field">
+                                <label class="label_field">GroupId</label>
+                                <div class="controls_field">
+                                    <select class="form-control" formConrolName="country" name="country">
+                                        <option [value]="'UAE'">1</option>
+                                        <option [value]="'IN'">2</option>
+                                    </select>
+                                    <small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the
+                                            country
+                                        </div>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group name_field">
+                                <label class="label_field">UserId</label>
+                                <div class="controls_field">
+                                    <select class="form-control" formConrolName="country" name="country">
+                                        <option [value]="'UAE'">1</option>
+                                        <option [value]="'IN'">2</option>
+                                    </select>
+                                    <small *ngIf="submitted && fConrols.country?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.country?.errors?.required">&#x26A0;Please select the
+                                            country
+                                        </div>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div id="menu4" class="tab-pane fade">
+                        <div class="create_company_form global_form">
+                            <div class="form-group name_field">
+                                <label class="label_field">Step Description</label>
+                                <div class="controls_field">
+                                    <input type="text" class="form-control" required name="companyName"
+                                        formControlName="companyName" placeholder="Enter step description">
+                                    <small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Roles name is
+                                            required</div>
+                                    </small>
+                                </div>
+
+                            </div>
+                            <div class="form-group name_field">
+                                <label class="label_field">Step Stage</label>
+                                <div class="controls_field">
+                                    <input type="text" class="form-control" required name="companyName"
+                                        formControlName="companyName" placeholder="Enter step stage">
+                                    <small *ngIf="submitted && fConrols.companyName?.errors" class="text-danger">
+                                        <div *ngIf="fConrols.companyName?.errors?.required">&#x26A0; Roles name is
+                                            required</div>
+                                    </small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="menu5" class="tab-pane fade">
+                        <h3 id="xyz">XYZ PROCESS</h3>
+                        <div class="row">
+                            <div class="col-9">
+
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <button class="card">aceeptance
+                                                </button>
+                                            </div>
+                                            <div class="col-4 abc">
+                                                <span style='font-size:20px; color:green'>&#8594;</span>
+                                                <br>
+                                                <span style='font-size:20px; color:red;'>&#8592;</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <button class="card">aceeptance
+                                                </button>
+                                            </div>
+                                            <div class="col-4 abc">
+                                                <span style='font-size:20px; color:green'>&#8594;</span>
+                                                <br>
+                                                <span style='font-size:20px; color:red;'>&#8592;</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <button class="card">aceeptance
+                                                </button>
+                                            </div>
+                                            <div class="col-4 abc">
+                                                <span style='font-size:20px; color:green'>&#8594;</span>
+                                                <br>
+                                                <span style='font-size:20px; color:red;'>&#8592;</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <button class="card">aceeptance
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 arrow">
+                                        <span>&#x2193;</span>
+                                    </div>
+                                    <div class="col-2 arrow">
+                                        <span>&#x2193;</span>
+                                    </div>
+                                    <div class="col-2 arrow">
+                                        <span>&#x2193;</span>
+                                    </div>
+                                    <div class="col-2 arrow">
+                                        <span>&#x2193;</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <button class="xyz">COMPILANCE</button>
+
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <ul>
+                                    <h6>Tool Box</h6>
+                                    <li><span id="x"></span><span> &nbsp;&nbsp;ssasa</span></li>
+                                    <br>
+                                    <li><span id="y"></span><span>&nbsp;&nbsp;ssasa</span></li>
+                                    <br>
+                                    <li> <span class="abcde">&#8594;</span><span>&nbsp;&nbsp;dshdh</span>
+                                    </li>
+                                    <br>
+                                    <li> <span class="abcdef">&#8594;</span><span>&nbsp;&nbsp;
+                                            Rejected</span></li>
+                                    <br>
+                                    <li> <span class="abcdefg">&#8594;</span><span>&nbsp;&nbsp;
+                                            dshdh</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu6" class="tab-pane fade">
+                        <h3>Menu 3</h3>
+                        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                            explicabo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

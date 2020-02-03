@@ -1,0 +1,74 @@
+<!--inner-container-->
+<div class="row mt-3 create_new_company">
+    <div class="container">
+        <!--title-->
+        <div class=" row-div">
+            <div class="title_col">
+                <a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+            </div>
+            <ul class="subm">
+                <li>Entity Management <a href="">/</a> </li>
+                <li>Company <a href="">/</a> </li>
+                <li><a href="">VIEW AND EDIT </a></li>
+            </ul>
+            <!-- <h1 class="heading">Create a New Company</h1> -->
+        </div>
+        <!--/title-->
+
+        <!--data-section-->
+        <div class="data_section row-div">
+            <div class="data_title row-div">
+                <h3>VIEW AND EDIT DEPARTMENT</h3>
+            </div>
+            <div class="data_inner row-div">
+                <div class="row">
+                    <!--left-sidebar-->
+                    <div class="col-12 col-lg-3 left_sidebar">
+                        <app-entity-sidebar></app-entity-sidebar>
+                    </div>
+                    <!--right_container-->
+                    <div class="col-12 col-lg-9 right_container">
+                        <div class="data_inner row-div">
+                            <div class="table-form">
+
+                            </div>
+                            <div class="table-resposive">
+                                <table class="w-100 table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td class="tfooter_btn_col"><button class="float-none btn btn-save" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> EDIT</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                             <td class="tfooter_btn_col"><button class="float-none btn btn-save" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> EDIT</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td class="tfooter_btn_col"><button class="float-none btn btn-save" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> EDIT</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/data-section-->
+
+
+                </div>
+            </div>
+            <!--/inner-container-->
+        </div>
+    </div>
+</div>
+<app-edit-company [editRecords]=records></app-edit-company>

@@ -1,0 +1,90 @@
+.card{
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #612583;
+    border-radius: .25rem;
+    padding: 20px 2px;
+    text-align: center;
+    line-height: auto;
+    color: white;
+    background: #612583;
+ 
+}
+
+#xyz{
+    margin:0px;
+}
+
+
+
+.xyz{
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #0099cc;
+    border-radius: .25rem;
+    width: 501.33px;
+    height: 60px;
+    line-height: 60px;;
+    text-align: center;
+    font-display: center;
+    color: white;
+    background: #0099cc;
+    align-items: center;
+    margin: 4px;
+}
+
+#x{
+    border: 8px solid #612583;
+border-bottom: 2px;
+    background: #612583;
+border-width: 20px;
+border-top: 2px;
+
+}
+#y{
+ border: 8px solid #0099cc;
+border-bottom: 2px;
+ background: #0099cc;
+border-width: 20px;
+border-top: 2px;
+
+}
+.abc{
+    padding-left: 24px;
+}
+.arrow{
+    font-size:70px;
+     padding-left:30px; 
+    color:yellow
+}
+
+.abcde{
+    font-size:25px;
+     padding-left:10px;
+     color:green;
+}
+
+.abcdef{
+    font-size:25px;
+     padding-left:10px;
+     color:red;
+}
+.abcdefg{
+    font-size:25px;
+     padding-left:10px;
+     color:yellow;
+}

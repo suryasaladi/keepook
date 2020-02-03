@@ -1,0 +1,122 @@
+<!--inner-container-->
+<div class="row mt-3 create_new_company">
+	<div class="container">
+		<!--title-->
+		<div class=" row-div">
+			<div class="title_col">
+				<a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+			</div>
+			<ul class="subm">
+				<li>Technical Setting <a href="">/</a> </li>
+				<li>Datasource <a href="">/</a> </li>
+				<li><a href="">Add </a></li>
+			</ul>
+			<!-- <h1 class="heading">Create a New Company</h1> -->
+		</div>
+		<!--/title-->
+		<!--data-section-->
+		<div class="data_section row-div">
+			<div class="data_title row-div">
+				<h3> Create Data Source</h3>
+			</div>
+			<div class="data_inner row-div">
+				<div class="row">
+					<!--left-sidebar-->
+					<div class="col-12 col-lg-3 left_sidebar">
+						<app-technical-sidebar></app-technical-sidebar>
+					</div>
+					<!--right_container-->
+					<div class="col-12 col-lg-9 right_container">
+						<form [formGroup]="createCompanyForm" class="inner_content row-div">
+							<div class="global_form ">
+
+								<div class="form-group name_field">
+									<label class="label_field">Apply DataSource To </label>
+									<div class="controls_field">
+										<select class="form-control">
+											<option>All</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group name_field">
+									<label class="label_field">Select DataSource Type </label>
+									<div class="controls_field">
+										<select class="form-control">
+											<option>Excel File</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group location_field global_form ">
+									<div class="form-group  form-group2">
+										<label class="label_field">Upload</label>
+
+										<div class="controls_field">
+											<div class="form-group ">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="browse_file form-group2">
+											<angular-file-uploader #fileUpload1 [config]="afuConfig"
+												[resetUpload]="true" (ApiResponse)="DocUpload($event)">
+											</angular-file-uploader>
+											<div class="custom-file">
+
+
+												<input type="file" required class="custom-file-input"
+													formControlName="logo" name="logo">
+												<label class="custom-file-label" for="customFile">
+													<img src="assets/images/browse_file.png" alt="">
+												</label>
+												<small *ngIf="submitted && fConrols.logo?.errors" class="text-danger">
+													<div *ngIf="fConrols.logo?.errors?.required">&#x26A0; Company logo
+														is
+														required</div>
+												</small>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group name_field">
+										<label class="label_field">User Name </label>
+										<div class="controls_field">
+												<input type="text" class="form-control">
+										</div>
+								</div>
+								<div class="form-group name_field">
+										<label class="label_field">Password </label>
+										<div class="controls_field">
+												<input type="text" class="form-control">
+										</div>
+								</div>
+								<div class="form-group name_field">
+										<label class="label_field">Sheet </label>
+										<div class="controls_field">
+											<select class="form-control">
+												<option>Users</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group name_field">
+											<label class="label_field">Custom Query </label>
+											<div class="controls_field">
+													<input type="text" class="form-control">
+											</div>
+									</div>
+
+							</div>
+
+							<div class="tfooter_btn_col">
+								<button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+								<button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+							</div>
+						</form>
+					</div>
+					<!--/right_container-->
+				</div>
+			</div>
+		</div>
+		<!--/data-section-->
+	</div>
+</div>
+<!--/inner-container-->

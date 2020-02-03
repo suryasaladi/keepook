@@ -1,0 +1,210 @@
+<div class="row mt-3 create_new_company">
+	<div class="container">
+		<!--title-->
+		<div class=" row-div">
+			<div class="title_col">
+				<a (click)='goBack()' class="back_btn"><i class="fa fa-mail-reply"></i> Back</a>
+			</div>
+
+			<ul class="subm">
+				<li>Access Management <a href="">/</a> </li>
+				<li>Users <a href="">/</a> </li>
+				<li><a href="">Add </a></li>
+			</ul>
+			<!-- <h1 class="heading">Create a New Company</h1> -->
+		</div>
+		<!--/title-->
+
+		<!--data-section-->
+		<div class="data_section row-div">
+			<div class="data_title row-div">
+				<h3>New User Set Up</h3>
+			</div>
+			<div class="data_inner row-div">
+				<div class="row">
+					<!--left-sidebar-->
+					<div class="col-12 col-lg-3 left_sidebar">
+						<app-access-sidebar></app-access-sidebar>
+					</div>
+
+					<!--right_container-->
+
+					<div class="col-12 col-lg-9 right_container">
+						<form [formGroup]="createUsersForm" class="inner_content row-div"
+							(ngSubmit)="createUsersSubmit()">
+							<div class="create_company_form global_form">
+
+								<div class="form-group subject_field">
+									<label class="label_field">ORGANIZATIONAL UNIT</label>
+									<div class="controls_field">
+										<select class="form-control">
+											<option>Emirates NBD Bank</option>
+
+										</select>
+									</div>
+								</div>
+
+								<h3>USER PERSONAL DETAILS</h3>
+								<div class="form-group name_field">
+									<label class="label_field">Full Name</label>
+									<div class="controls_field">
+										<input type="text" class="form-control" required name="fullName"
+											formControlName="fullName">
+										<small *ngIf="submitted && fConrols.fullName?.errors" class="text-danger">
+											<div *ngIf="fConrols.fullName?.errors?.required">&#x26A0; Full Name is
+												required</div>
+										</small>
+									</div>
+
+								</div>
+
+								<div class="form-group name_field">
+									<label class="label_field">User Name</label>
+									<div class="controls_field">
+										<input type="text" class="form-control" required name="userName"
+											formControlName="userName">
+										<small *ngIf="submitted && fConrols.userName?.errors" class="text-danger">
+											<div *ngIf="fConrols.userName?.errors?.required">&#x26A0; User Name is
+												Required
+											</div>
+										</small>
+									</div>
+
+								</div>
+
+								<div class="form-group name_field">
+									<label class="label_field">Email</label>
+									<div class="controls_field">
+										<input type="text" class="form-control" required name="email"
+											formControlName="email">
+										<small *ngIf="submitted && fConrols.email?.errors" class="text-danger">
+											<div *ngIf="fConrols.email?.errors?.required">&#x26A0; Email invalid
+											</div>
+										</small>
+									</div>
+
+								</div>
+
+								<div class="form-group name_field">
+									<label class="label_field">Contact Details</label>
+
+									<div class="controls_field">
+										<input type="text" class="form-control" required name="contactDetails"
+											formControlName="contactDetails">
+										<small *ngIf="submitted && fConrols.contactDetails?.errors" class="text-danger">
+											<div *ngIf="fConrols.contactDetails?.errors?.required">&#x26A0; Contact
+												Details invalid
+											</div>
+										</small>
+										<br>
+										<hr>
+									</div>
+
+								</div>
+
+								<div class="form-group comp_detail">
+									<h3>USER DEPARTMENT</h3>
+									<div class="form-group subject_field">
+										<label class="label_field">Department</label>
+										<div class="controls_field">
+											<select class="form-control">
+												<option>Legal</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="form-group subject_field">
+										<label class="label_field">Role</label>
+										<div class="controls_field">
+											<select class="form-control">
+												<option>Manager</option>
+
+											</select>
+											<br>
+											<hr>
+										</div>
+									</div>
+
+									<h3>SET DEFAULT PASSWORD</h3>
+									<div class="form-group name_field">
+										<label class="label_field">Password</label>
+										<div class="controls_field">
+											<input type="text" class="form-control" required name="password"
+												formControlName="password">
+											<small *ngIf="submitted && fConrols.password?.errors" class="text-danger">
+												<div *ngIf="fConrols.password?.errors?.required">&#x26A0; Invalid
+													Password
+												</div>
+											</small>
+
+										</div>
+
+
+									</div>
+									<div class="form-group name_field">
+										<label class="label_field">Confirm Password</label>
+										<div class="controls_field">
+											<input type="text" class="form-control" required name="confirmPassword"
+												formControlName="confirmPassword">
+											<small *ngIf="submitted && fConrols.confirmPassword?.errors"
+												class="text-danger">
+												<div *ngIf="fConrols.confirmPassword?.errors?.required">&#x26A0; Wrong
+													Password
+												</div>
+											</small>
+
+										</div>
+										<br><br>
+										<hr>
+
+									</div>
+
+									<h3>USER VALIDITY</h3>
+									<div class="form-group name_field">
+										<label class="label_field">Valid From</label>
+										<div class="controls_field">
+											<input type="text" class="form-control" required name="validFrom"
+												formControlName="validFrom">
+											<small *ngIf="submitted && fConrols.validFrom?.errors" class="text-danger">
+												<div *ngIf="fConrols.validFrom?.errors?.required">&#x26A0; Select Valid
+													Date
+												</div>
+											</small>
+										</div>
+									</div>
+									<div class="form-group name_field">
+										<label class="label_field"> Valid Till</label>
+										<div class="controls_field">
+											<input type="text" class="form-control" required name="validTill"
+												formControlName="validTill">
+											<small *ngIf="submitted && fConrols.validTill?.errors" class="text-danger">
+												<div *ngIf="fConrols.validTill?.errors?.required">&#x26A0; Select Valid
+													Date
+												</div>
+											</small>
+
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="tfooter_btn_col">
+								<button type="button" class="btn btn-cancel"><i class="fa fa-close"></i> Cancel</button>
+								<button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+							</div>
+
+						</form>
+
+					</div>
+					<!--/right_container-->
+				</div>
+			</div>
+
+		</div>
+		<!--/data-section-->
+
+
+	</div>
+</div>
+<!--/inner-container-->

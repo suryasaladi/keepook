@@ -1,0 +1,65 @@
+<div class="page-login">
+    <div class="row">
+        <div class="col-6">
+            <div class="left-form">
+                <ul>
+                    <li><i class="fa fa-check"></i>Digitize Contracts End to End</li>
+                    <li><i class="fa fa-check"></i>Sample Content1</li>
+                    <li><i class="fa fa-check"></i>Sample Content1</li>
+                    <li><i class="fa fa-check"></i>Sample Content1</li>
+                    <li><i class="fa fa-check"></i>Sample Content1</li>
+                    <li><i class="fa fa-check"></i>And Much More</li>
+                </ul>
+                <a href="#" class="sam-bot"><i class="fa fa-play"></i>Watch Video</a>
+            </div>
+        </div>
+        <div class="col-6">
+            <form class="login-form " [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+                <div class="in-container  m-auto">
+
+                    <div class="imgcontainer imgcontainer1">
+                        <img src="assets/images/logo.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-group">
+                            <input type="text" formControlName="usernameOrEmail" class="form-control" placeholder="Username or Email"
+                                name="usernameOrEmail" required>
+                                <div class="form_error_blk"
+                                *ngIf="loginForm.controls['usernameOrEmail'].touched && loginForm.controls['usernameOrEmail'].errors && loginForm.controls['username'].errors.required">
+                                <span class="form_error_class">Username or Email required</span>
+                              </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" formControlName="password" class="form-control"
+                                placeholder="Password" name="password" required>
+
+                        </div>
+                        <div class="lo-for">
+                            <label>
+                                <input type="checkbox" class="checks" checked="checked" name="remember"> Remember me
+                            </label>
+                            <div class="form_error_blk"
+                                *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].errors  && loginForm.controls['password'].errors.required">
+                                <span class="form_error_class">Password required</span>
+                            </div>
+                            <div class="psws"> <a href="#">Forgot password?</a></div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div>
+                        <div class="form-group border-0 p-0 tfooter_btn_col mb-4 pt-1 text-left">
+                            <button type="submit" [disabled]="loginForm.invalid || submit"
+                                class="button-red btn btn-login"><i class="fa fa-check"></i> Login</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-page-loader #spinnerLoad></app-page-loader>

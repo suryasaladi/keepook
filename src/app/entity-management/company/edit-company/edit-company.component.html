@@ -1,0 +1,103 @@
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h6><span class="fa fa-edit"></span> EDIT THE FIELDS</h6>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+            <form class="modal-body" [formGroup]="editCompanyForm" (ngSubmit)="editCompanySubmit()">
+                <div class="data_section row-div">
+                    <div class="table-resposive">
+                        <table class="w-100  no-borders">
+                            <tbody>
+                                <tr>
+                                    <td class="p-1">Name: </td>
+                                    <td class="p-1">
+                                        <input type="text" formControlName="companyName" class="form-control"
+                                            value="{{editRecords?.companyName}}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Address:</td>
+                                    <td class="p-1">
+                                        <textarea type="text" class="form-control" formControlName="address"
+                                            value="{{editRecords?.address}}"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">City:</td>
+                                    <td class="p-1">
+                                        <input type="text" class="form-control" formControlName="city"
+                                            value="{{editRecords?.city}}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Country:</td>
+                                    <td class="p-1">
+                                        <select class="form-control" formControlName="country">
+                                            <option value="UAE">United Arab Emirates</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Logo:</td>
+                                    <td class="p-1">
+                                            <div class="custom-file">										
+									  
+                                                    <input type="file" required class="custom-file-input" formControlName="logo"
+                                                        name="logo">
+                                                    <label class="custom-file-label" for="customFile">
+                                                        <img src="assets/images/browse_file.png" alt="">
+                                                    </label> 
+                                                    <!-- <small *ngIf="submitted && fConrols.logo?.errors" class="text-danger">
+                                                        <div *ngIf="fConrols.logo?.errors?.required">&#x26A0; Company logo is
+                                                            required</div>
+                                                    </small> -->
+                                                </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Contact Person:</td>
+                                    <td class="p-1">
+                                        <input type="text" formControlName="contactPerson" class="form-control"
+                                            value="{{editRecords?.contactPerson}}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Phone Number:</td>
+                                    <td class="p-1"><input type="text" class="form-control"
+                                            formControlName="phoneNumber" value="{{editRecords?.phoneNumber}}"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Website:</td>
+                                    <td class="p-1"><input type="text" class="form-control" formControlName="website"
+                                            value="{{editRecords?.website}}"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">Status:</td>
+                                    <td class="p-1"><input type="text" class="form-control" formControlName="status"
+                                            value="{{editRecords?.status}}"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-1">ZIP Code:</td>
+                                    <td class="p-1"><input type="text" class="form-control" formControlName="zipCode"
+                                            value="{{editRecords?.zipCode}}"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tfooter_btn_col p-2">
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal"><i class="fa fa-close"></i>
+                        Cancel</button>
+                    <button type="submit" class="btn btn-save"><i class="fa fa-check"></i> Save</button>
+                </div>
+            </form>
+        </div>
+        <!-- Modal footer -->
+
+    </div>
+</div>
+<!--data-section-->
